@@ -16,7 +16,7 @@ case class Point(x:Int, y:Int){
   def +(p:Point) = Point(this.x + p.x, this.y + p.y )
   def move (dx:Int, dy:Int) = Point(this.x + dx, this.y + dy)
   def distance (p:Point):Double= {
-    val  num = (Math.abs(p.x) - Math.abs(this.x))* (Math.abs(p.x) - Math.abs(this.x)) + (Math.abs(p.y) - Math.abs(this.y))*(Math.abs(p.y) - Math.abs(this.y))
+    val  num = (p.x - this.x)* (p.x - this.x) + (p.y - this.y)*(p.y - this.y)
      return Math.sqrt(num)
    }
   def invert = Point(this.y, this.x)
